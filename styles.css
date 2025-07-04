@@ -1,0 +1,155 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.carousel-wrapper
+{
+    width: 100%;
+    max-width: 1000px;
+    margin: 2rem auto;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-inner,
+.carousel-item
+{
+    height: 100%;
+}
+
+/* 이미지 + 텍스트 슬라이드 레이아웃 */
+.carousel-item>.d-flex
+{
+    height: 100%;
+    /* 데스크탑 기본: 가로 정렬 */
+    flex-direction: row;
+    align-items: center;
+}
+
+.carousel-item img
+{
+    width: 50%;
+    height: auto;
+    max-height: 100%;
+    object-fit: contain;
+    background-color: #f8f9fa;
+}
+
+/* 텍스트 박스 스타일 */
+.carousel-text
+{
+    width: 50%;
+    padding: 1rem 2rem;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #f8f9fa;
+}
+
+.carousel-text h2
+{
+    /* position: relative; */
+    /* top: -10px; */
+    /* 위로 살짝 이동 */
+    text-align: center;
+    /* margin-bottom: 4rem; */
+    font-weight: 800;
+    /* 아래 텍스트와 간격 유지 */
+}
+
+h1
+{
+    margin: 20px;
+    padding: 20px;
+    font-weight: 800;
+}
+
+h3
+{
+    font-weight: 800;
+    /* or bolder */
+}
+
+.center-bottom-text
+{
+    text-align: center;
+}
+
+.carousel-indicators [data-bs-target]
+{
+    background-color: rgba(0, 0, 0, 0.3);
+    /* 기본 점 색상 */
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 0 6px;
+}
+
+.carousel-indicators .active
+{
+    background-color: #007bff;
+    /* 활성화된 점 색상 (파란색) */
+}
+
+.info-line
+{
+    display: flex;
+    justify-content: flex-start;
+    margin: 1rem;
+}
+
+.info-label
+{
+    font-weight: bold;
+    min-width: 150px;
+    /* 라벨 너비 고정 */
+}
+
+.info-value
+{
+    text-align: left;
+}
+
+@media (max-width: 767px)
+{
+    .carousel-wrapper
+    {
+        height: auto;
+        /* 높이 고정 해제 */
+    }
+
+    .carousel-item,
+    .carousel-inner,
+    .carousel-item>.d-flex
+    {
+        flex-direction: column !important;
+        height: auto;
+        /* 자동 높이 */
+    }
+
+    .carousel-item img,
+    .carousel-text
+    {
+        width: 100%;
+    }
+
+    .carousel-text
+    {
+        padding: 1rem;
+        text-align: center;
+    }
+}
+
+@media (min-width: 768px)
+{
+    .carousel-wrapper
+    {
+        height: 80vh;
+    }
+}
