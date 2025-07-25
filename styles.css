@@ -154,6 +154,7 @@ h3 {
     margin-top: -40px; /* 💡 이 값을 더 줄이면 광고가 더 올라옴 */
     margin-bottom: 40px;
 
-    min-height: 100px;
-    border: 2px dashed red; /* 확인용 */
+    /* 확인용 */
+    /* min-height: 100px;
+    border: 2px dashed red;  */
 }
